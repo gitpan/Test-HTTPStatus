@@ -1,6 +1,11 @@
-# $Id: load.t,v 1.1 2002/08/20 03:25:28 comdog Exp $
-use strict;
+# $Id: load.t,v 1.2 2004/09/08 01:11:12 comdog Exp $
+BEGIN {
+	@classes = qw(Test::HTTPStatus);
+	}
 
-use Test::More tests => 1;
+use Test::More tests => scalar @classes;
 
-require_ok( 'Test::HTTPStatus' );
+foreach my $class ( @classes )
+	{
+	print "bail out! Could not compile $class!" unless use_ok( $class );
+	}

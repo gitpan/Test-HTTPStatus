@@ -1,4 +1,4 @@
-#$Id: HTTPStatus.pm,v 1.1 2002/08/20 03:25:28 comdog Exp $
+#$Id: HTTPStatus.pm,v 1.2 2004/09/08 01:11:12 comdog Exp $
 package Test::HTTPStatus;
 use strict;
 
@@ -8,12 +8,12 @@ Test::HTTPStatus - check an HTTP status
 
 =head1 SYNOPSIS
 
-use Test::HTTPStatus tests => 2;
-use Apache::Constants qw(:http);
+	use Test::HTTPStatus tests => 2;
+	use Apache::Constants qw(:http);
 
-http_ok( 'http://www.perl.org', HTTP_OK );
+	http_ok( 'http://www.perl.org', HTTP_OK );
 
-http_ok( $url, $status );
+	http_ok( $url, $status );
 
 =head1 DESCRIPTION
 
@@ -33,13 +33,13 @@ use Test::Builder;
 use URI;
 
 my $Test = Test::Builder->new;
-	
+
 use constant NO_URL             => -1;
 use constant INVALID_URL        => -2;
 use constant HTTP_OK            => 200;
 use constant HTTP_NOT_FOUND     => 404;
 
-sub import 
+sub import
 	{
     my $self = shift;
     my $caller = caller;
@@ -53,7 +53,7 @@ sub import
     $Test->exported_to($caller);
     $Test->plan(@_);
 	}
-	
+
 =head1 FUNCTIONS
 
 =over 4
@@ -72,9 +72,9 @@ sub http_ok
 	my $expected = shift || HTTP_OK;
 
 	my $hash = _get_status( $url );
-			
+
 	my $status = $hash->{status};
-	
+
 	if( defined $expected and $expected eq $status )
 		{
 		$Test->ok( 1, "Expected [$expected], got [$status] for [$url]");
@@ -96,29 +96,41 @@ sub http_ok
 sub _get_status
 	{
 	my $string = shift;
-	
+
 	return { status => NO_URL } unless defined $string;
 
 	my $url = URI->new($string)->canonical;
-	return { result => INVALID_URL } 
+	return { result => INVALID_URL }
 		unless UNIVERSAL::isa( $url, 'URI' );
-		
+
 	my $status = HTTP::SimpleLinkChecker::check_link( $url );
-	
+
 	return { url => $url, status => $status };
 	}
+
+=back
 
 =head1 SEE ALSO
 
 Apache::Constants, HTTP::SimpleLinkChecker
 
+=head1 SOURCE AVAILABILITY
+
+This source is part of a SourceForge project which always has the
+latest sources in CVS, as well as all of the previous releases.
+
+	http://sourceforge.net/projects/brian-d-foy/
+
+If, for some reason, I disappear from the world, one of the other
+members of the project can shepherd this module appropriately.
+
 =head1 AUTHOR
 
-brian d foy, E<lt>bdfoy@cpan.orgE<gt>
+brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Copyright 2002, brian d foy, All Rights Reserved.
+Copyright 2002-2004, brian d foy, All Rights Reserved.
 
 You may use, modify, and distribute this package under the
 same terms as Perl itself.
