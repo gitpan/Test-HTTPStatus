@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.5 2004/09/08 01:11:12 comdog Exp $
+# $Id: Makefile.PL,v 1.6 2005/03/08 23:10:55 comdog Exp $
 use ExtUtils::MakeMaker;
 
 eval "use Test::Manifest";
@@ -19,8 +19,8 @@ unless( $@ )
 
 WriteMakefile
         (
-        'NAME'      => 'Test::HTTPStatus',
-        'VERSION'   => '0.62',
+        'NAME'         => 'Test::HTTPStatus',
+        'VERSION_FROM' => 'lib/HTTPStatus.pm',
  		'PREREQ_PM' => {
  			'Test::Builder'            => '0',
  			'Test::More'               => '0',
