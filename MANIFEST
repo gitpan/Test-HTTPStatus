@@ -1,0 +1,7 @@
+MANIFEST
+Makefile.PL
+lib/HTTPStatus.pm
+t/get_status.t
+t/load.t
+t/status.t
+t/test_manifest
