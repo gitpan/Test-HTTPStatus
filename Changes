@@ -1,7 +1,11 @@
-# $Id: Changes,v 1.6 2006/05/18 02:49:42 comdog Exp $
+# $Id: Changes,v 1.7 2007/01/10 04:49:34 comdog Exp $
 0.62 - Tue Sep  7 20:11:30 2004
 * cleaned up distribution
 * no need to upgrade
+
+1.06 - Tue Jan  9 22:49:46 2007
+	* updated copyright and license info
+	* no code changes, so no need to upgrade
 
 1.05 - Wed May 17 21:47:27 2006
 	* updates for the documentation and kwalitee. No need to upgrade.

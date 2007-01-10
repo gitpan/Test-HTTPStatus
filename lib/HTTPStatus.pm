@@ -1,4 +1,4 @@
-#$Id: HTTPStatus.pm,v 1.5 2006/05/18 02:46:40 comdog Exp $
+#$Id: HTTPStatus.pm,v 1.6 2007/01/10 04:49:04 comdog Exp $
 package Test::HTTPStatus;
 use strict;
 
@@ -23,7 +23,7 @@ Check the HTTP status for a resource.
 
 use 5.004;
 use vars qw($VERSION);
-$VERSION = sprintf "%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.6 $ =~ /(\d+)\.(\d+)/;
 
 use Carp qw(carp);
 use HTTP::SimpleLinkChecker;
@@ -126,13 +126,14 @@ members of the project can shepherd this module appropriately.
 
 brian d foy, C<< <bdfoy@cpan.org> >>
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2002-2006, brian d foy, All Rights Reserved.
+Copyright (c) 2002-2007 brian d foy.  All rights reserved.
 
-You may use, modify, and distribute this package under the
-same terms as Perl itself.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
+
 
 1;

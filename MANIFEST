@@ -1,5 +1,6 @@
 Changes
 lib/HTTPStatus.pm
+LICENSE
 Makefile.PL
 MANIFEST
 META.yml
