@@ -1,4 +1,4 @@
-#$Id: HTTPStatus.pm,v 1.6 2007/01/10 04:49:04 comdog Exp $
+#$Id: HTTPStatus.pm 2344 2007-10-28 01:57:39Z comdog $
 package Test::HTTPStatus;
 use strict;
 
@@ -23,7 +23,7 @@ Check the HTTP status for a resource.
 
 use 5.004;
 use vars qw($VERSION);
-$VERSION = sprintf "%d.%02d", q$Revision: 1.6 $ =~ /(\d+)\.(\d+)/;
+$VERSION = 1.07;
 
 use Carp qw(carp);
 use HTTP::SimpleLinkChecker;

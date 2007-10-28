@@ -1,4 +1,4 @@
-# $Id: load.t,v 1.2 2004/09/08 01:11:12 comdog Exp $
+# $Id: load.t 1440 2004-09-08 01:11:12Z comdog $
 BEGIN {
 	@classes = qw(Test::HTTPStatus);
 	}

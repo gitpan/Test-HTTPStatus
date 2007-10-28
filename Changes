@@ -1,7 +1,10 @@
-# $Id: Changes,v 1.7 2007/01/10 04:49:34 comdog Exp $
+# $Id: Changes 2345 2007-10-28 01:58:04Z comdog $
 0.62 - Tue Sep  7 20:11:30 2004
 * cleaned up distribution
 * no need to upgrade
+
+1.07 - Sat Oct 27 20:58:03 2007
+	* distro cleanups after moving from CVS to SVN
 
 1.06 - Tue Jan  9 22:49:46 2007
 	* updated copyright and license info

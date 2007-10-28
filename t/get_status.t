@@ -1,4 +1,4 @@
-# $Id: get_status.t,v 1.1 2002/08/20 03:25:28 comdog Exp $
+# $Id: get_status.t 250 2002-08-20 03:25:28Z comdog $
 use strict;
 
 use Test::More tests => 4;

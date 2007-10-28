@@ -1,13 +1,16 @@
-# $Id: Makefile.PL,v 1.7 2007/01/10 04:49:04 comdog Exp $
+# $Id: Makefile.PL 2344 2007-10-28 01:57:39Z comdog $
 use ExtUtils::MakeMaker;
 
 eval "use Test::Manifest 1.14";
 
 WriteMakefile
 	(
-	'NAME'         => 'Test::HTTPStatus',
-	'VERSION_FROM' => 'lib/HTTPStatus.pm',
-	'LICENSE'       => 'perl',
+	'NAME'          => 'Test::HTTPStatus',
+	'ABSTRACT'      => 'check an HTTP status',
+	'VERSION_FROM'  => 'lib/HTTPStatus.pm',
+	'LICENSE'		=> 'perl',
+	'AUTHOR'		=> 'brian d foy <bdfoy@cpan.org>',
+
 	'PREREQ_PM' => {
 		'Test::Builder'            => '0',
 		'Test::More'               => '0',
@@ -15,6 +18,7 @@ WriteMakefile
 		'URI'                      => '0',
 		'Carp'                     => '0',
 		},
+
 	'PM'        => 
 		{
 		'lib/HTTPStatus.pm' => '$(INST_LIBDIR)/HTTPStatus.pm',

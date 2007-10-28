@@ -1,4 +1,4 @@
-# $Id: status.t,v 1.1 2002/08/20 03:25:28 comdog Exp $
+# $Id: status.t 250 2002-08-20 03:25:28Z comdog $
 use strict;
 
 use Test::HTTPStatus tests => 1;
