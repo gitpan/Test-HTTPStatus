@@ -1,7 +1,11 @@
-# $Id: Changes 2345 2007-10-28 01:58:04Z comdog $
+# $Id: Changes 2673 2008-08-15 15:29:18Z comdog $
 0.62 - Tue Sep  7 20:11:30 2004
 * cleaned up distribution
 * no need to upgrade
+
+1.08 - Fri Aug 15 17:28:49 2008
+	* Update the tests for the exported constants
+	* No need to upgrade
 
 1.07 - Sat Oct 27 20:58:03 2007
 	* distro cleanups after moving from CVS to SVN

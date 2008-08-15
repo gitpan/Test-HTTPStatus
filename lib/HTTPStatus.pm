@@ -1,6 +1,9 @@
-#$Id: HTTPStatus.pm 2344 2007-10-28 01:57:39Z comdog $
+#$Id: HTTPStatus.pm 2672 2008-08-15 15:28:00Z comdog $
 package Test::HTTPStatus;
 use strict;
+
+use warnings;
+no warnings;
 
 =head1 NAME
 
@@ -21,9 +24,9 @@ Check the HTTP status for a resource.
 
 =cut
 
-use 5.004;
+use 5.006;
 use vars qw($VERSION);
-$VERSION = 1.07;
+$VERSION = 1.08;
 
 use Carp qw(carp);
 use HTTP::SimpleLinkChecker;
@@ -32,8 +35,8 @@ use URI;
 
 my $Test = Test::Builder->new;
 
-use constant NO_URL             => -1;
-use constant INVALID_URL        => -2;
+use constant NO_URL             =>  -1;
+use constant INVALID_URL        =>  -2;
 use constant HTTP_OK            => 200;
 use constant HTTP_NOT_FOUND     => 404;
 
